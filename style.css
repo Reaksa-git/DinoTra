@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0e6d2; /* Sand color */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#game {
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    border-bottom: 4px solid #8B4513;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#sticker {
+    width: 60px;  /* Adjust this to make your dog bigger or smaller */
+    height: 60px;
+    object-fit: contain; /* Keeps the image from looking stretched */
+}
+#character {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0; /* Forces it to the floor */
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#character img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* This removes any weird spacing images sometimes have */
+    display: block; 
+}
+
+#block {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    font-size: 30px;
+}
+
+/* The Animation for the Cactus */
+.block-move {
+    animation: move 1.5s infinite linear;
+}
+
+@keyframes move {
+    0% { right: -50px; }
+    100% { right: 100%; }
+}
+
+/* Jump Animation */
+.animate-jump {
+    animation: jump 0.5s ease-out;
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 120px; }
+    100% { bottom: 0; }
+}
+
+#score-board {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5d4037;
+}
+
+#finish-line {
+    display: none; /* Hidden until win */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100px;
+    background-color: rgba(0, 255, 0, 0.2);
+    border-left: 5px dashed black;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
