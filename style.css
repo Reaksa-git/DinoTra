@@ -22,15 +22,15 @@ body {
     border-radius: 10px;
 }
 #sticker {
-    width: 60px;  /* Adjust this to make your dog bigger or smaller */
-    height: 60px;
-    object-fit: contain; /* Keeps the image from looking stretched */
+    width: 100px;  /* Increased from 60px */
+    height: 100px; /* Increased from 60px */
+    object-fit: contain; 
 }
+
 #character {
-   width: 80px; 
-    height: 80px;
+    width: 120px;   /* Increased from 80px */
+    height: 120px;  /* Increased from 80px */
     position: absolute;
-    /* This is the fix: change 'top' to 'bottom' */
     bottom: 0;   
     left: 50px;
     display: flex;
@@ -39,9 +39,9 @@ body {
 }
 
 #character img {
-   width: 100%;
+    width: 100%;    /* This will now fill the 120px container */
     height: 100%;
-    object-fit: cover; /* This makes your photo look clean */
+    object-fit: cover; 
     border-radius: 10px;
 }
 
